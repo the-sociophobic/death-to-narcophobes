@@ -1,0 +1,48 @@
+@import '~bootstrap/scss/bootstrap.scss'
+@import './variables.css'
+
+
+$breakpoint-1024: 1024px
+
+
+.desktop-only
+  @media screen and ( max-width: $breakpoint-1024 )
+    display: none
+.mobile-only
+  @media screen and ( min-width: $breakpoint-1024 + 1px)
+    display: none
+
+.noselect
+  -webkit-touch-callout: none;  /* iOS Safari */
+  -webkit-user-select: none;    /* Safari */
+  -khtml-user-select: none;     /* Konqueror HTML */
+  -moz-user-select: none;       /* Firefox */
+  -ms-user-select: none;        /* Internet Explorer/Edge */
+  user-select: none;            /* Non-prefixed version, currently supported by Chrome and Opera */
+
+.button
+  padding: 0
+  cursor: pointer
+  outline: none
+  border: none
+  background-color: rgba(0, 0, 0, 0)
+
+*
+  margin: 0
+  box-sizing: border-box
+
+html, body, #root, .App
+  width: 100%
+  min-height: 100vh
+
+.App
+  @extend .d-flex
+  @extend .flex-column
+  overflow-x: hidden
+  background-color: black
+  .content
+  &__img
+    position: relative
+    width: 80%
+    left: 10%
+    height: auto
